@@ -62,4 +62,21 @@ def pipeline():
     print("Signature:", signature)
     print("Valid:", contract.verify("model_key_456"))
 
-    return sys
+    return system
+
+def audit(system):
+    print("\nStored Contracts:")
+    for k, v in system.records.items():
+        print(k, v.serialize())
+
+def summary():
+    print("\nSystem running exclusively standard library components")
+
+def main():
+    system = pipeline()
+    audit(system)
+    summary()
+    print("Done")
+
+if __name__ == "__main__":
+    main()
